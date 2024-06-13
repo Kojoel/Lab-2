@@ -155,7 +155,8 @@ h1{
 
 span{
     padding-left: 10px;
-    color: green;
+    padding-right: 10px;
+    color: black;
     text-transform:upperCase;
     background-color: lightskyblue;
     width: 100%;
@@ -163,10 +164,16 @@ span{
     height: 40px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-family: 600;
 }
 
 .completed {
     text-decoration: line-through;
     color: grey;
+}
+
+select{
+    padding: 0px 10px;
+    width: 120px;
 }

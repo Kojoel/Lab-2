@@ -2,6 +2,8 @@ const textArea = document.querySelector("#text-area");
 const addItemBtn = document.querySelector("#add-item-button");
 const ul = document.querySelector('.content ul');
 const dueDate = document.querySelector('#due-date');
+const completedBtn = document.querySelector('#completed-btn');
+const allBtn = document.querySelector('#all-btn');
 
 let todoIdCounter = localStorage.getItem('todoIdCounter') ? parseInt(localStorage.getItem('todoIdCounter')) : 0;
 
@@ -76,6 +78,17 @@ function addItemToDOM(id, text, completed) {
 
     ul.appendChild(List);
 
+    allBtn.addEventListener('click', () => {
+        List.style.display = 'flex';
+    });
+
+    completedBtn.addEventListener('click', () => {
+        if(!label.classList.contains('completed')){
+            List.style.display = 'none';
+        }
+    });
+
+
     // Grey out event when checkbox is clicked
     checkBox.addEventListener('change', () => {
         label.classList.toggle('completed', checkBox.checked);
@@ -124,6 +137,7 @@ function createItem() {
 
         // Clear the textarea after adding the item
         textArea.value = '';
+
     }
 }
 
