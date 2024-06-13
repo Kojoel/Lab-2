@@ -45,6 +45,38 @@ h1{
     margin-bottom: 5px;
 }
 
+.dueAdd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dueDate{
+    display: flex;
+    gap: 5px;
+}
+
+.dueDate label{
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+.dueDate input{
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid lightskyblue
+}
+
+#duedate{
+    font-size: 10px;
+    width: 80px;
+    padding: 10px;
+    color: black;
+    font-weight: 600;
+}
+
 .add-item{
     display: flex;
     align-items: center;
@@ -54,7 +86,7 @@ h1{
 
 #add-item-button{
     height: 40px;
-    width: 18%;
+    width: 100%;
     background-color: green;
     border-radius: 8px;
     border: none;

@@ -1,6 +1,7 @@
 const textArea = document.querySelector("#text-area");
 const addItemBtn = document.querySelector("#add-item-button");
 const ul = document.querySelector('.content ul');
+const dueDate = document.querySelector('#due-date');
 
 let todoIdCounter = localStorage.getItem('todoIdCounter') ? parseInt(localStorage.getItem('todoIdCounter')) : 0;
 
@@ -34,6 +35,7 @@ function addItemToDOM(id, text, completed) {
     if (completed) {
         label.classList.add('completed');
     }
+    
 
     todoItemDiv.appendChild(checkBox);
     todoItemDiv.appendChild(label);
@@ -52,8 +54,13 @@ function addItemToDOM(id, text, completed) {
     delBtn.textContent = 'Delete';
     delBtn.setAttribute('id', `del-button-${id}`);
 
+    const dueDateSpan = document.createElement('span');
+    dueDateSpan.setAttribute('id', `duedate`);
+    dueDateSpan.textContent = dueDate.value;
+
     updelBtnDiv.appendChild(updBtn);
     updelBtnDiv.appendChild(delBtn);
+    updelBtnDiv.appendChild(dueDateSpan);
 
     // Creating List element
     const List = document.createElement('li');

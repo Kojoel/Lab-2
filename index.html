@@ -14,15 +14,21 @@
         <div class="container">
             <div class="add-item">
                 <input type="text" id="text-area" placeholder="Enter new event">
-                <button id="add-item-button">Add Item</button>
+                <div class="dueAdd">
+                    <div class="dueDate">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" name="" id="due-date">
+                    </div>
+                    <button id="add-item-button">Add Item</button>
+                </div>
             </div>
         </div>
         <div class="content">
             <ul>
                 <li id="List">
                     <span>Tasks</span>
-                    <!-- -----
-                    <div class="todo-item">
+                   
+                    <!-- <div class="todo-item">
                         <input type="checkbox" id="checkbox">
                         <label for="checkbox">Todo item 1</label>
                     </div>
@@ -30,9 +36,8 @@
                         <button>update</button>
                         <button>delete</button>
                         <input type="date" id="due-date">
-                    </div>
+                    </div> -->
 
-                    ----->
                 </li>
             </ul>
         </div>
